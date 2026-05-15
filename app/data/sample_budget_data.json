@@ -1,0 +1,121 @@
+{
+  "services": [
+    {
+      "serviceId": "svc-checkout-core",
+      "name": "Checkout Core",
+      "owner": "Commerce Reliability",
+      "tier": "tier-0",
+      "environment": "production",
+      "sloTarget": "99.90",
+      "monthlyBudgetMinutes": 43.2,
+      "consumedMinutes": 31.4,
+      "projectedConsumedMinutes": 58.6,
+      "errorRatePct": 0.14,
+      "latencyRegressionPct": 17,
+      "changeFailureRatePct": 22,
+      "deployWindowRisk": "high",
+      "dependencyPressure": 84,
+      "criticalIncidents": 2,
+      "lastRecoveryDrillDays": 77,
+      "deploysThisMonth": 18,
+      "dependencies": [
+        "Payments Gateway",
+        "Tax Engine",
+        "Identity Edge"
+      ]
+    },
+    {
+      "serviceId": "svc-identity-edge",
+      "name": "Identity Edge",
+      "owner": "Platform Security",
+      "tier": "tier-0",
+      "environment": "production",
+      "sloTarget": "99.95",
+      "monthlyBudgetMinutes": 21.6,
+      "consumedMinutes": 7.2,
+      "projectedConsumedMinutes": 13.5,
+      "errorRatePct": 0.03,
+      "latencyRegressionPct": 5,
+      "changeFailureRatePct": 6,
+      "deployWindowRisk": "low",
+      "dependencyPressure": 42,
+      "criticalIncidents": 0,
+      "lastRecoveryDrillDays": 18,
+      "deploysThisMonth": 7,
+      "dependencies": [
+        "Directory API",
+        "Session Cache"
+      ]
+    },
+    {
+      "serviceId": "svc-stream-router",
+      "name": "Event Stream Router",
+      "owner": "Data Platform",
+      "tier": "tier-1",
+      "environment": "production",
+      "sloTarget": "99.90",
+      "monthlyBudgetMinutes": 43.2,
+      "consumedMinutes": 24.8,
+      "projectedConsumedMinutes": 47.1,
+      "errorRatePct": 0.09,
+      "latencyRegressionPct": 11,
+      "changeFailureRatePct": 14,
+      "deployWindowRisk": "medium",
+      "dependencyPressure": 71,
+      "criticalIncidents": 1,
+      "lastRecoveryDrillDays": 52,
+      "deploysThisMonth": 14,
+      "dependencies": [
+        "Kafka Mesh",
+        "Schema Registry",
+        "Warehouse Sync"
+      ]
+    },
+    {
+      "serviceId": "svc-observability-api",
+      "name": "Observability API",
+      "owner": "Developer Platform",
+      "tier": "tier-1",
+      "environment": "production",
+      "sloTarget": "99.90",
+      "monthlyBudgetMinutes": 43.2,
+      "consumedMinutes": 12.4,
+      "projectedConsumedMinutes": 19.7,
+      "errorRatePct": 0.05,
+      "latencyRegressionPct": 4,
+      "changeFailureRatePct": 8,
+      "deployWindowRisk": "low",
+      "dependencyPressure": 36,
+      "criticalIncidents": 0,
+      "lastRecoveryDrillDays": 23,
+      "deploysThisMonth": 9,
+      "dependencies": [
+        "Tracing Store",
+        "Metrics Fanout"
+      ]
+    },
+    {
+      "serviceId": "svc-warehouse-sync",
+      "name": "Warehouse Sync",
+      "owner": "Data Platform",
+      "tier": "tier-2",
+      "environment": "production",
+      "sloTarget": "99.50",
+      "monthlyBudgetMinutes": 216.0,
+      "consumedMinutes": 44.0,
+      "projectedConsumedMinutes": 71.2,
+      "errorRatePct": 0.08,
+      "latencyRegressionPct": 7,
+      "changeFailureRatePct": 9,
+      "deployWindowRisk": "low",
+      "dependencyPressure": 29,
+      "criticalIncidents": 0,
+      "lastRecoveryDrillDays": 31,
+      "deploysThisMonth": 6,
+      "dependencies": [
+        "Object Storage",
+        "Warehouse Compute"
+      ]
+    }
+  ]
+}
