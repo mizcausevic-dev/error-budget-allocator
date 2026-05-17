@@ -37,7 +37,7 @@ Error budgets are easy to talk about and harder to operate. Teams usually know t
 ## Local run
 
 ```powershell
-Set-Location "C:\Users\chaus\dev\repos\error-budget-allocator"
+cd error-budget-allocator
 py -3.11 -m venv .venv
 .\.venv\Scripts\pip.exe install -r requirements.txt
 .\.venv\Scripts\python.exe -m app.main
