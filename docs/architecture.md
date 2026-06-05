@@ -11,7 +11,7 @@ It focuses on the reliability questions that usually get buried underneath dashb
 
 ## Core model
 
-The service works from a seeded fleet model in [app/data/sample_budget_data.json](/C:/Users/chaus/dev/repos/error-budget-allocator/app/data/sample_budget_data.json).
+The service works from a seeded fleet model in [app/data/sample_budget_data.json](../app/data/sample_budget_data.json).
 
 Each service carries:
 
@@ -28,7 +28,7 @@ Each service carries:
 
 ## Evaluation flow
 
-The allocator service in [app/services/allocator_service.py](/C:/Users/chaus/dev/repos/error-budget-allocator/app/services/allocator_service.py) computes:
+The allocator service in [app/services/allocator_service.py](../app/services/allocator_service.py) computes:
 
 1. live burn percentage
 2. projected burn percentage
@@ -42,7 +42,7 @@ The score deliberately mixes burn posture with operational context so a service 
 
 ## UI surfaces
 
-The HTML proof layer in [app/render.py](/C:/Users/chaus/dev/repos/error-budget-allocator/app/render.py) exposes:
+The HTML proof layer in [app/render.py](../app/render.py) exposes:
 
 - `/`
   Reliability overview with headroom, projected overrun, and top burn lanes.
@@ -57,13 +57,13 @@ The HTML proof layer in [app/render.py](/C:/Users/chaus/dev/repos/error-budget-a
 
 ## API layer
 
-The FastAPI app in [app/main.py](/C:/Users/chaus/dev/repos/error-budget-allocator/app/main.py) exposes both human-readable views and machine-consumable endpoints so the same allocation logic can feed dashboards, release gates, or incident-review tooling.
+The FastAPI app in [app/main.py](../app/main.py) exposes both human-readable views and machine-consumable endpoints so the same allocation logic can feed dashboards, release gates, or incident-review tooling.
 
 ## Validation
 
 The repo includes:
 
-- unit tests in [tests/test_allocator_service.py](/C:/Users/chaus/dev/repos/error-budget-allocator/tests/test_allocator_service.py)
-- smoke checks in [scripts/smoke_check.py](/C:/Users/chaus/dev/repos/error-budget-allocator/scripts/smoke_check.py)
-- proof asset generation in [scripts/render_readme_assets.py](/C:/Users/chaus/dev/repos/error-budget-allocator/scripts/render_readme_assets.py)
-- GitHub Actions CI in [.github/workflows/ci.yml](/C:/Users/chaus/dev/repos/error-budget-allocator/.github/workflows/ci.yml)
+- unit tests in [tests/test_allocator_service.py](../tests/test_allocator_service.py)
+- smoke checks in [scripts/smoke_check.py](../scripts/smoke_check.py)
+- proof asset generation in [scripts/render_readme_assets.py](../scripts/render_readme_assets.py)
+- GitHub Actions CI in [.github/workflows/ci.yml](../.github/workflows/ci.yml)
